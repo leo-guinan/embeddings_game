@@ -20,7 +20,8 @@
           },
           "buildType": "nixpacks",
           "ci": {
-            "type": "ec2"
+            "type": "ec2",
+            "instanceStorage": 60
           },
           "basePath": ".",
           "installCommand": "cd backend && poetry install --no-dev --no-ansi",
