@@ -13,6 +13,8 @@
           "id": "api",
           "name": "API",
           "type": "web",
+          "cpu": 0.25,
+          "memory": 0.5,
           "target": {
             "type": "fargate"
           },
