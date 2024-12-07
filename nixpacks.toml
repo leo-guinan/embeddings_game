@@ -2,4 +2,5 @@ providers = ["...", "node"]
 
 [phases.setup]
 nixPkgs = ["python3", "poetry", "nodejs_20"]
+aptPkgs = ["libstdc++6"]
 
