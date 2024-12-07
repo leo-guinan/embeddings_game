@@ -22,9 +22,9 @@
           "ci": {
             "type": "ec2"
           },
-          "basePath": "./backend",
-          "installCommand": "poetry install --no-dev --no-ansi",
-          "startCommand": "uvicorn backend.main:app --host 0.0.0.0 --port 8000"
+          "basePath": ".",
+          "installCommand": "cd backend && poetry install --no-dev --no-ansi",
+          "startCommand": "cd backend && uvicorn main:app --host 0.0.0.0 --port 8000"
         },
         {
           "id": "frontend",
