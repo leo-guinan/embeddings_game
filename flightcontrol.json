@@ -36,7 +36,7 @@
           },
           "singlePageApp": true,
           "basePath": "./frontend",
-          "buildCommand": "npm build",
+          "buildCommand": "npm run build",
           "outputDirectory": "./frontend/dist"
         }
       ]
