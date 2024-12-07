@@ -1,0 +1,43 @@
+{
+  "$schema": "https://app.flightcontrol.dev/schema.json",
+  "environments": [
+    {
+      "id": "production",
+      "name": "Production",
+      "region": "us-east-2",
+      "source": {
+        "branch": "main"
+      },
+      "services": [
+        {
+          "id": "api",
+          "name": "API",
+          "type": "web",
+          "target": {
+            "type": "fargate"
+          },
+          "buildType": "nixpacks",
+          "ci": {
+            "type": "ec2"
+          },
+          "basePath": "./backend",
+          "buildCommand": "poetry install --no-root",
+          "startCommand": "uvicorn backend.main:app --host 0.0.0.0 --port 8000"
+        },
+        {
+          "id": "frontend",
+          "name": "Frontend Web",
+          "type": "static",
+          "buildType": "nixpacks",
+          "ci": {
+            "type": "ec2"
+          },
+          "singlePageApp": true,
+          "basePath": "./frontend",
+          "buildCommand": "npm build",
+          "outputDirectory": "./frontend/dist"
+        }
+      ]
+    }
+  ]
+} 
