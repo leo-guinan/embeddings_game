@@ -35,8 +35,8 @@
             "type": "ec2"
           },
           "singlePageApp": true,
-          "basePath": "./frontend",
-          "buildCommand": "npm run build",
+          "basePath": ".",
+          "buildCommand": "cd frontend && npm run build",
           "outputDirectory": "frontend/dist"
         }
       ]

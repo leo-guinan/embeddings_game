@@ -1,0 +1,19 @@
+{
+  "environments": [
+    {
+      "id": "production",
+      "name": "Production",
+      "region": "us-east-1",
+      "services": {
+        "frontend": {
+          "type": "static",
+          "buildType": "nixpacks",
+          "domain": "your-domain.com",
+          "buildCommand": "npm ci && npm run build && mkdir -p frontend/dist && mv dist/* frontend/dist/",
+          "outputDirectory": "frontend/dist",
+          "rootDirectory": "."
+        }
+      }
+    }
+  ]
+} 
