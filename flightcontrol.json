@@ -36,7 +36,7 @@
           },
           "singlePageApp": true,
           "basePath": ".",
-          "buildCommand": "cd frontend && npm run build",
+          "buildCommand": "cd frontend && vite build",
           "outputDirectory": "frontend/dist"
         }
       ]
