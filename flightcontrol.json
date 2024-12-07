@@ -15,6 +15,7 @@
           "type": "web",
           "cpu": 0.5,
           "memory": 1,
+          "storage": 40,
           "target": {
             "type": "fargate"
           },

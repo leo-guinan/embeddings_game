@@ -9,7 +9,7 @@ interface EmotionCoordinate {
   color: string;
 }
 
-const API_URL = 'http://localhost:8005';
+const API_URL = process.env.API_URL || 'http://localhost:8005';
 
 export const EmotionPlot: React.FC = () => {
   const { 
