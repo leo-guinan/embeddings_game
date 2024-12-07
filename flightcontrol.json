@@ -15,14 +15,14 @@
           "type": "web",
           "cpu": 0.5,
           "memory": 1,
-          "storage": 60,
+          "storage": 100,
           "target": {
             "type": "fargate"
           },
           "buildType": "nixpacks",
           "ci": {
             "type": "ec2",
-            "instanceStorage": 60
+            "instanceStorage": 100
           },
           "basePath": ".",
           "installCommand": "cd backend && poetry install --no-dev --no-ansi",
