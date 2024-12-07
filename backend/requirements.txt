@@ -1,0 +1,6 @@
+setuptools
+fastapi
+uvicorn
+sentence-transformers
+pydantic
+numpy 

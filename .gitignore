@@ -1,0 +1,6 @@
+.node_modules/
+.env
+poetry.lock
+__pycache__/
+*.pyc
+frontend/node_modules/
