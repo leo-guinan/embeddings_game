@@ -23,7 +23,7 @@
             "type": "ec2"
           },
           "basePath": "./backend",
-          "buildCommand": "poetry install --no-root",
+          "installCommand": "poetry install --no-dev --no-interactive --no-ansi",
           "startCommand": "uvicorn backend.main:app --host 0.0.0.0 --port 8000"
         },
         {
