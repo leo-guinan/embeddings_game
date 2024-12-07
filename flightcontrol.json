@@ -25,9 +25,8 @@
             "instanceStorage": 100
           },
           "basePath": ".",
-          "preInstallCommand": "apt-get update && apt-get install -y libstdc++6",
           "installCommand": "cd backend && poetry install --no-dev --no-ansi",
-          "startCommand": "cd backend && poetry run uvicorn main:app --host 0.0.0.0 --port 8000"
+          "startCommand": "cd backend && poetry run uvicorn main:app --host 0.0.0.0 --port 3000"
         },
         {
           "id": "frontend",
