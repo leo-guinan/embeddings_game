@@ -4,7 +4,6 @@ providers = ["...", "node"]
 nixPkgs = ["python3", "poetry"]
 aptPkgs = [
     "libstdc++6",
-    "npm"
 ]
 nodeVersion = "18"
 
