@@ -1,22 +1,16 @@
 providers = ["...", "node"]
 
 [phases.setup]
-nixPkgs = ["python3", "poetry", "nodejs_18"]
-aptPkgs = ["libstdc++6"]
+nixPkgs = ["python3", "poetry"]
+aptPkgs = [
+    "libstdc++6",
+    "nodejs",
+    "npm"
+]
 
 [start]
 cmd = "cd backend && poetry run uvicorn main:app --host 0.0.0.0 --port $PORT"
 
-# Set LD_LIBRARY_PATH for runtime
-[phases.build]
-cmds = [
-  "export LD_LIBRARY_PATH=/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH"
-]
-
 [phases.runtime]
 aptPkgs = ["libstdc++6"]
-
-# Ensure LD_LIBRARY_PATH is available at runtime
-[variables]
-LD_LIBRARY_PATH = "/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu"
 
